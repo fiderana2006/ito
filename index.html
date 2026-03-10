@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Restaurant - Notre Équipe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Style pour les photos des développeurs - agrandies et arrondies */
+			.developer-card .image.featured {
+				border: solid 6px #ebebeb !important;
+				max-width: 350px;  /* Agrandi de 250px à 350px (+100px = environ +2cm) */
+				margin: 0 auto 1.5em auto;
+				border-radius: 20px;  /* Bordures arrondies */
+				overflow: hidden;  /* Pour que l'image suive le border-radius */
+				transition: transform 0.3s ease;  /* Petit effet au survol (optionnel) */
+			}
+			.developer-card .image.featured:hover {
+				transform: scale(1.02);  /* Effet de zoom léger au survol (optionnel) */
+			}
+			.developer-card .image.featured img {
+				width: 100%;
+				display: block;
+				border-radius: 14px;  /* Légèrement moins que le parent pour l'effet de bordure */
+			}
+			.developer-card h3 {
+				margin-bottom: 0.25em;
+			}
+			.developer-card .role {
+				font-weight: 600;
+				color: #888;
+				text-transform: uppercase;
+				font-size: 0.85em;
+				letter-spacing: 2px;
+				margin-bottom: 1em;
+			}
+		</style>
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html">❤️🌸F&F🌸❤️</a></h1>
+							<p>Cuisine traditionnelle et produits frais</p>
+
+						<!-- Nav -->
+						 <input type="checkbox" id="menu-toggle">
+						 <label for="menu-toggle" class="menu-toggle-label">☰ Menu</label>
+							<nav id="nav">
+								<ul>
+									<li><a class="icon solid fa-home" href="index.html"><span>Accueil</span></a></li>
+									<li>
+										<a href="#" class="icon fa-chart-bar"><span>Notre carte</span></a>
+										<ul>
+											<li><a href="#">Entrées</a></li>
+											<li><a href="#">Plats principaux</a></li>
+											<li><a href="#">Desserts</a></li>
+											<li>
+												<a href="#">Boissons</a>
+												<ul>
+													<li><a href="#">Vins</a></li>
+													<li><a href="#">Cocktails</a></li>
+													<li><a href="#">Sans alcool</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>Notre équipe</span></a></li>
+									<li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Réservation</span></a></li>
+									<li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>Contact</span></a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</section>
+
+			<!-- Features - Section des développeurs -->
+				<section id="features">
+					<div class="container">
+						<header>
+							<h2>Les <strong>développeurs</strong> du site</h2>
+						</header>
+						<div class="row aln-center">
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Développeur 1 -->
+									<section class="developer-card">
+										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="Jean Dupont" /></a>
+										<header>
+											<h3>finona</h3>
+											<div class="role">Développeur</div>
+										</header>
+										<p> l'interface du site et s'est assuré que tout soit parfaitement responsive.</p>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Développeur 2 -->
+									<section class="developer-card">
+										<a href="#" class="image featured"><img src="images/RpAWHk9i.jpeg" alt="Marie Martin" /></a>
+										<header>
+											<h3>lova</h3>
+											<div class="role">Développeuse </div>
+										</header>
+										<p>toute la partie technique et l'optimisation des performances.</p>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Développeur 3 -->
+									<section class="developer-card">
+										<a href="#" class="image featured"><img src="images/9hz3Xfvn.jpeg" alt="Pierre Durand" /></a>
+										<header>
+											<h3>hasina</h3>
+											<div class="role">Intégrateur</div>
+										</header>
+										<p>vérifié la compatibilité navigateurs.</p>
+									</section>
+
+							</div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><a href="#" class="button icon solid fa-file">Voir leurs projets</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Banner -->
+				<section id="banner">
+					<div class="container">
+						<p>Un site vitrine <strong>simple et efficace</strong><br />
+						Pour votre restaurant.</p>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+
+							<!-- Content -->
+								<div id="content" class="col-8 col-12-medium">
+
+									<!-- Post -->
+										<article class="box post">
+											<header>
+												<h2><a href="#">Bienvenue au <strong>Bistrot Parisien</strong></a></h2>
+											</header>
+											<a href="#" class="image featured"><img src="images/azerty.jpeg" alt="" /></a>
+											<h3>Notre histoire</h3>
+											<p>Ouvert depuis 1985, notre bistrot vous accueille dans une ambiance chaleureuse et authentique. Nous privilégions les produits frais et de saison pour vous proposer une cuisine traditionnelle française.</p>
+											<ul class="actions">
+												<li><a href="#" class="button icon solid fa-file">Lire la suite</a></li>
+											</ul>
+										</article>
+
+									<!-- Post -->
+										<article class="box post">
+											<header>
+												<h2><a href="#">Notre <strong>carte</strong> évolue au fil des saisons</a></h2>
+											</header>
+											<a href="#" class="image featured"><img src="images/a.jpeg" alt="" /></a>
+											<h3>Des produits frais</h3>
+											<p>Notre chef sélectionne chaque matin les meilleurs produits auprès des producteurs locaux. La carte change régulièrement pour suivre les saisons et vous offrir le meilleur de la gastronomie française.</p>
+											<ul class="actions">
+												<li><a href="#" class="button icon solid fa-file">Découvrir la carte</a></li>
+											</ul>
+										</article>
+
+								</div>
+
+							<!-- Sidebar -->
+								<div id="sidebar" class="col-4 col-12-medium">
+
+									<!-- Excerpts -->
+										<section>
+											<ul class="divided">
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date">Mars 2024</span>
+																<h3><a href="#">Nouveau menu printanier</a></h3>
+															</header>
+															<p>Découvrez nos nouvelles créations pour le printemps.</p>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date">Février 2024</span>
+																<h3><a href="#">Soirée spéciale Saint-Valentin</a></h3>
+															</header>
+															<p>Un menu romantique préparé pour l'occasion.</p>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Excerpt -->
+														<article class="box excerpt">
+															<header>
+																<span class="date">Janvier 2024</span>
+																<h3><a href="#">Fermeture annuelle</a></h3>
+															</header>
+															<p>Le restaurant sera fermé du 15 au 30 janvier.</p>
+														</article>
+
+												</li>
+											</ul>
+										</section>
+
+									<!-- Highlights -->
+										<section>
+											<ul class="divided">
+												<li>
+
+													<!-- Highlight -->
+														<article class="box highlight">
+															<header>
+																<h3><a href="#">Notre chef</a></h3>
+															</header>
+															<a href="#" class="image left"><img src="images/az.jpeg" alt="" /></a>
+															<p>Le chef Antoine Martin, formé auprès des plus grands, met son savoir-faire à votre service pour des plats savoureux et généreux.</p>
+															<ul class="actions">
+																<li><a href="#" class="button icon solid fa-file">En savoir plus</a></li>
+															</ul>
+														</article>
+
+												</li>
+												<li>
+
+													<!-- Highlight -->
+														<article class="box highlight">
+															<header>
+																<h3><a href="#">Horaires d'ouverture</a></h3>
+															</header>
+															<a href="#" class="image left"><img src="images/aze.jpeg" alt="" /></a>
+															<p>Du mardi au samedi : 12h-14h30 et 19h-22h30<br>
+															Dimanche : 12h-15h<br>
+															Fermé le lundi</p>
+															<ul class="actions">
+																<li><a href="#" class="button icon solid fa-file">Réserver</a></li>
+															</ul>
+														</article>
+
+												</li>
+											</ul>
+										</section>
+
+								</div>
+
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<header>
+							<h2>Nous <strong>contacter</strong></h2>
+						</header>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<section>
+									<form method="post" action="#">
+										<div class="row gtr-50">
+											<div class="col-6 col-12-small">
+												<input name="name" placeholder="Nom" type="text" />
+											</div>
+											<div class="col-6 col-12-small">
+												<input name="email" placeholder="Email" type="text" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message"></textarea>
+											</div>
+											<div class="col-12">
+												<a href="#" class="form-button-submit button icon solid fa-envelope">Envoyer</a>
+											</div>
+										</div>
+									</form>
+								</section>
+							</div>
+							<div class="col-6 col-12-medium">
+								<section>
+									<p>Pour toute réservation ou information, n'hésitez pas à nous contacter.</p>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul class="icons">
+												<li class="icon solid fa-home">
+													Nanisana
+												</li>
+												<li class="icon solid fa-phone">
+													038 24 234 56
+												</li>
+												<li class="icon solid fa-envelope">
+													<a href="#">contact@restot</a>
+												</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<ul class="icons">
+												<li class="icon brands fa-twitter">
+													<a href="#">fyh</a>
+												</li>
+												<li class="icon brands fa-instagram">
+													<a href="#">@fyh</a>
+												</li>
+												<li class="icon brands fa-facebook-f">
+													<a href="#">fb.com/fyh</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div id="copyright" class="container">
+						<ul class="links">
+							<li>&copy; Le Bistrot Parisien. Tous droits réservés.</li>
+					</div>
+				</section>
+
+		</div>
+
+	</body>
+</html>
