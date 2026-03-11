@@ -25,7 +25,7 @@ jobs:
       run: sass assets/scss:assets/css --no-source-map
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v6
+      uses: peaceiris/actions-gh-pages@v6.4   # <-- version corrigée
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # racine du projet
+        publish_dir: ./   # racine du projet
