@@ -37,6 +37,31 @@
 				margin: 2em 0;
 			}
 		</style>
+		<style>
+			/* --- Ajout : menu responsive minimal (copie depuis index.html) --- */
+			.menu-toggle-label { display: none; cursor: pointer; font-weight: 700; background: rgba(232,232,232,0.95); padding: 8px 12px; border-radius: 4px; position: absolute; right: 12px; top: 18px; z-index: 10003; box-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.15); color: #444; }
+			#menu-toggle { display: none; }
+
+			@media screen and (max-width: 980px) {
+				.menu-toggle-label { display: block; }
+				#menu-toggle:checked ~ #nav {
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 3.5em;
+					background: #fff;
+					z-index: 10002;
+					padding: 0.5em 0;
+					border-top: 1px solid #e5e5e5;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+				}
+				#menu-toggle:checked ~ #nav > ul { display: block; margin: 0; padding: 0; }
+				#menu-toggle:checked ~ #nav > ul > li { display: block; padding: 0.65em 1em; border-top: 1px solid #f0f0f0; }
+				#menu-toggle:checked ~ #nav > ul > li > a { display: block; color: #444; }
+				#menu-toggle:checked ~ #nav > ul > li > a > span { display: inline-block; margin-left: 0; }
+			}
+		</style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -56,7 +81,7 @@
 								<ul>
 									<li><a class="icon solid fa-home" href="index.html"><span>Accueil</span></a></li>
 									<li>
-										<a href="#" class="icon fa-chart-bar"><span>Notre carte</span></a>
+										<a href="carte.html" class="icon fa-chart-bar"><span>Notre carte</span></a>
 										<ul>
 											<li><a href="right-sidebar.html">Entrées</a></li>
 											<li><a href="right-sidebar.html">Plats</a></li>
@@ -81,101 +106,54 @@
 							<!-- Post -->
 								<article class="box post">
 									<header>
-										<h2>Contactez-<strong>nous</strong> et réservez</h2>
+										<h2>Contactez-<strong>nous</strong></h2>
+										<p>Pour toute question, réservation spéciale ou événement, contactez-nous via le formulaire ci-dessous ou aux coordonnées indiquées.</p>
 									</header>
-									
-									<span class="image featured"><img src="images/azert.jpeg" alt="Notre restaurant" /></span>
-									
-									<!-- Informations de contact -->
-									<div class="contact-details">
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<h3> Adresse</h3>
+							
+									<div class="row">
+										<div class="col-8 col-12-medium">
+											<form method="post" action="#">
+												<div class="row gtr-50">
+													<div class="col-6 col-12-small">
+														<input name="name" placeholder="Nom" type="text" required />
+													</div>
+													<div class="col-6 col-12-small">
+														<input name="email" placeholder="Email" type="email" required />
+													</div>
+													<div class="col-12">
+														<textarea name="message" placeholder="Votre message" required></textarea>
+													</div>
+													<div class="col-12">
+														<ul class="actions">
+															<li><button type="submit" class="button icon solid fa-envelope">Envoyer</button></li>
+														</ul>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="col-4 col-12-medium">
+											<div class="contact-details">
+												<h3>Adresse</h3>
 												<p>15 Rue de la République<br>
 												75001 Paris<br>
 												France</p>
-												
-												<h3>📞 Téléphone</h3>
-												<p>01 42 68 50 00<br>
-												+261 34 12 345 67 (Madagascar)</p>
-											</div>
-											<div class="col-6 col-12-small">
+												<h3>Téléphone</h3>
+												<p>01 42 68 50 00<br>038 24 234 56</p>
 												<h3>Horaires</h3>
-												<p>Mardi-samedi : 12h-14h30 / 19h-22h30<br>
-												Dimanche : 12h-15h<br>
-												Fermé lundi</p>
-												
-												<h3>✉️ Email</h3>
-												<p>contact@lebistrotparisien.fr<br>
-												reservation@lebistrotparisien.fr</p>
+												<p>Mardi - Samedi : 12h-14h30 / 19h-22h30<br>Dimanche : 12h-15h</p>
 											</div>
 										</div>
 									</div>
-									
-									<!-- Prix en Ariary -->
-									<h3>Nos prix en Ariary (MGA)</h3>
-									
-									<div class="menu-resume">
-										<h4>Entrées</h4>
-										<table>
-											<tr>
-												<td>Œufs meurette</td>
-												<td class="prix"><span class="prix-ariary">58 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Escargots de Bourgogne (douzaine)</td>
-												<td class="prix"><span class="prix-ariary">67 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Soupe à l'oignon gratinée</td>
-												<td class="prix"><span class="prix-ariary">53 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Foie gras de canard</td>
-												<td class="prix"><span class="prix-ariary">85 000 Ar</span></td>
-											</tr>
-										</table>
-										
-										<h4>Plats principaux</h4>
-										<table>
-											<tr>
-												<td>Steak frites, sauce béarnaise</td>
-												<td class="prix"><span class="prix-ariary">115 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Magret de canard, miel et épices</td>
-												<td class="prix"><span class="prix-ariary">125 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Bœuf bourguignon</td>
-												<td class="prix"><span class="prix-ariary">110 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Saumon à l'oseille</td>
-												<td class="prix"><span class="prix-ariary">105 000 Ar</span></td>
-											</tr>
-										</table>
-										
-										<h4>Desserts</h4>
-										<table>
-											<tr>
-												<td>Crème brûlée</td>
-												<td class="prix"><span class="prix-ariary">43 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Tarte Tatin</td>
-												<td class="prix"><span class="prix-ariary">48 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Mousse au chocolat</td>
-												<td class="prix"><span class="prix-ariary">43 000 Ar</span></td>
-											</tr>
-											<tr>
-												<td>Fromages affinés</td>
-												<td class="prix"><span class="prix-ariary">38 000 Ar</span></td>
-											</tr>
-										</table>
-										
+							
+									<!-- Carte statique / plan -->
+									<div class="row">
+										<div class="col-12">
+											<h3>Comment venir</h3>
+											<p>Nous sommes situés à proximité du centre-ville. Voici un plan indicatif :</p>
+											<a href="#" class="image featured"><img src="images/map-placeholder.jpg" alt="Plan d'accès" /></a>
+										</div>
+									</div>
+								</article>
 										<p><em>Les prix sont donnés à titre indicatif et peuvent varier selon les saisons.</em></p>
 									</div>
 									

@@ -33,6 +33,31 @@
 				color: #999;
 			}
 		</style>
+		<style>
+			/* --- Ajout : menu responsive minimal (copie depuis index.html) --- */
+			.menu-toggle-label { display: none; cursor: pointer; font-weight: 700; background: rgba(232,232,232,0.95); padding: 8px 12px; border-radius: 4px; position: absolute; right: 12px; top: 18px; z-index: 10003; box-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.15); color: #444; }
+			#menu-toggle { display: none; }
+
+			@media screen and (max-width: 980px) {
+				.menu-toggle-label { display: block; }
+				#menu-toggle:checked ~ #nav {
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 3.5em;
+					background: #fff;
+					z-index: 10002;
+					padding: 0.5em 0;
+					border-top: 1px solid #e5e5e5;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+				}
+				#menu-toggle:checked ~ #nav > ul { display: block; margin: 0; padding: 0; }
+				#menu-toggle:checked ~ #nav > ul > li { display: block; padding: 0.65em 1em; border-top: 1px solid #f0f0f0; }
+				#menu-toggle:checked ~ #nav > ul > li > a { display: block; color: #444; }
+				#menu-toggle:checked ~ #nav > ul > li > a > span { display: inline-block; margin-left: 0; }
+			}
+		</style>
 	</head>
 	<body class="right-sidebar">
 		<div id="page-wrapper">
@@ -51,24 +76,9 @@
 							<nav id="nav">
 								<ul>
 									<li><a class="icon solid fa-home" href="index.html"><span>Accueil</span></a></li>
-									<li>
-										<a href="#" class="icon fa-chart-bar"><span>Notre carte</span></a>
-										<ul>
-											<li><a href="#">Entrées</a></li>
-											<li><a href="#">Plats principaux</a></li>
-											<li><a href="#">Desserts</a></li>
-											<li>
-												<a href="#">Boissons</a>
-												<ul>
-													<li><a href="#">Vins</a></li>
-													<li><a href="#">Cocktails</a></li>
-													<li><a href="#">Sans alcool</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
+									<li><a href="carte.html" class="icon fa-chart-bar"><span>Notre carte</span></a></li>
 									<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>Notre équipe</span></a></li>
-									<li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Réservation</span></a></li>
+									<li class="active"><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Réservation</span></a></li>
 									<li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>Contact</span></a></li>
 								</ul>
 							</nav>
@@ -84,84 +94,51 @@
 							<!-- Content - Carte du restaurant -->
 								<div id="content" class="col-8 col-12-medium">
 
-									<!-- Post - Entrées -->
+									<!-- Réservation -->
 										<article class="box post">
 											<header>
-												<h2>Notre <strong>carte</strong></h2>
-												<p>Des produits frais et de saison</p>
+												<h2>Réserver une <strong>table</strong></h2>
+												<p>Remplissez le formulaire ci-dessous pour effectuer une réservation.</p>
 											</header>
-											<span class="image featured"><img src="images/q.jpeg" alt="Notre carte" /></span>
-											
-											<h3>Entrées</h3>
-											<div class="menu-item">
-												<span class="price">1000Ar</span>
-												<h3>Œufs meurette</h3>
-												<div class="description">Œufs pochés, sauce bourguignonne, lardons et croûtons</div>
+											<div class="row">
+												<div class="col-12">
+													<form method="post" action="#">
+														<div class="row gtr-50">
+															<div class="col-6 col-12-small">
+																<input name="name" placeholder="Nom et prénom" type="text" required />
+															</div>
+															<div class="col-6 col-12-small">
+																<input name="email" placeholder="Email" type="email" required />
+															</div>
+															<div class="col-6 col-12-small">
+																<input name="phone" placeholder="Téléphone" type="text" required />
+															</div>
+															<div class="col-6 col-12-small">
+																<input name="guests" placeholder="Nombre de personnes" type="number" min="1" value="2" required />
+															</div>
+															<div class="col-6 col-12-small">
+																<input name="date" placeholder="Date (YYYY-MM-DD)" type="date" required />
+															</div>
+															<div class="col-6 col-12-small">
+																<input name="time" placeholder="Heure" type="time" required />
+															</div>
+															<div class="col-12">
+																<textarea name="notes" placeholder="Remarques (allergies, préférence de table, etc.)"></textarea>
+															</div>
+															<div class="col-12">
+																<ul class="actions">
+																	<li><button type="submit" class="button icon solid fa-envelope">Envoyer la réservation</button></li>
+																	<li><a href="carte.html" class="button">Consulter la carte</a></li>
+																</ul>
+															</div>
+														</div>
+													</form>
+												</div>
 											</div>
-											<div class="menu-item">
-												<span class="price">41000Ar</span>
-												<h3>Escargots de Bourgogne</h3>
-												<div class="description">Douzaine d'escargots, beurre persillé maison</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">11000Ar</span>
-												<h3>Soupe à l'oignon gratinée</h3>
-												<div class="description">Soupe traditionnelle, croûtons et fromage gratiné</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">1100Ar</span>
-												<h3>Foie gras de canard</h3>
-												<div class="description">Maison, chutney de figues et pain brioché</div>
-											</div>
-											
-											<h3>Plats principaux</h3>
-											<div class="menu-item">
-												<span class="price">241000Ar</span>
-												<h3>Steak frites</h3>
-												<div class="description">Onglet de bœuf, sauce béarnaise, pommes frites maison</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">261000Ar</span>
-												<h3>Magret de canard</h3>
-												<div class="description">Sauce au miel et épices, pommes de terre sautées</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">21000Ar</span>
-												<h3>Boeuf bourguignon</h3>
-												<div class="description">Viande mijotée au vin rouge, carottes, lardons, pommes vapeur</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">21000Ar</span>
-												<h3>Saumon à l'oseille</h3>
-												<div class="description">Pavé de saumon, sauce à l'oseille, riz sauvage</div>
-											</div>
-											
-											<h3>Desserts</h3>
-											<div class="menu-item">
-												<span class="price">9100Ar</span>
-												<h3>Crème brûlée</h3>
-												<div class="description">Vanille de Madagascar, caramel croquant</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">101000Ar</span>
-												<h3>Tarte Tatin</h3>
-												<div class="description">Pommes caramélisées, crème fraîche</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">1000Ar</span>
-												<h3>Mousse au chocolat</h3>
-												<div class="description">Chocolat noir 70%, maison</div>
-											</div>
-											<div class="menu-item">
-												<span class="price">1000Ar</span>
-												<h3>Fromages affinés</h3>
-												<div class="description">Sélection de fromages français, pain aux noix</div>
-											</div>
-											
-											<ul class="actions">
-												<li><a href="#" class="button icon solid fa-utensils">Réserver une table</a></li>
-												<li><a href="#" class="button icon solid fa-download">Télécharger la carte</a></li>
-											</ul>
+											<hr />
+											<h3>Informations pratiques</h3>
+											<p>Horaires : du mardi au samedi 12h-14h30 et 19h-22h30. Dimanche 12h-15h. Fermé le lundi.</p>
+											<p>Pour les grandes réservations (+10 personnes) ou événements, merci de nous contacter par téléphone au <strong>038 24 234 56</strong>.</p>
 										</article>
 
 								</div>

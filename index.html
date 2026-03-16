@@ -35,6 +35,38 @@
 				letter-spacing: 2px;
 				margin-bottom: 1em;
 			}
+
+			/* --- Ajout : menu responsive minimal ---
+			   Ce bloc permet d'afficher le label ☰ Menu en mobile
+			   et d'utiliser la checkbox #menu-toggle pour afficher
+			   / masquer la navigation (#nav) sans modifier le CSS
+			   principal ni le reste du HTML. */
+			.menu-toggle-label { display: none; cursor: pointer; font-weight: 700; background: rgba(232,232,232,0.95); padding: 8px 12px; border-radius: 4px; position: absolute; right: 12px; top: 18px; z-index: 10003; box-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.15); color: #444; }
+			#menu-toggle { display: none; }
+
+			@media screen and (max-width: 980px) {
+				.menu-toggle-label { display: block; }
+
+				/* Par défaut #nav est caché par le CSS principal; quand la checkbox
+				   est cochée, on l'affiche comme un panneau sous l'en-tête. */
+				#menu-toggle:checked ~ #nav {
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 3.5em; /* place le panneau sous l'en-tête */
+					background: #fff;
+					z-index: 10002;
+					padding: 0.5em 0;
+					border-top: 1px solid #e5e5e5;
+					box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+				}
+
+				#menu-toggle:checked ~ #nav > ul { display: block; margin: 0; padding: 0; }
+				#menu-toggle:checked ~ #nav > ul > li { display: block; padding: 0.65em 1em; border-top: 1px solid #f0f0f0; }
+				#menu-toggle:checked ~ #nav > ul > li > a { display: block; color: #444; }
+				#menu-toggle:checked ~ #nav > ul > li > a > span { display: inline-block; margin-left: 0; }
+			}
 		</style>
 	</head>
 	<body class="homepage">
@@ -55,7 +87,7 @@
 								<ul>
 									<li><a class="icon solid fa-home" href="index.html"><span>Accueil</span></a></li>
 									<li>
-										<a href="#" class="icon fa-chart-bar"><span>Notre carte</span></a>
+										<a href="carte.html" class="icon fa-chart-bar"><span>Notre carte</span></a>
 										<ul>
 											<li><a href="#">Entrées</a></li>
 											<li><a href="#">Plats principaux</a></li>
@@ -103,7 +135,7 @@
 
 								<!-- Développeur 2 -->
 									<section class="developer-card">
-										<a href="#" class="image featured"><img src="images/apola.jpg" alt="Marie Martin" /></a>
+										<a href="#" class="image featured"><img src="images/lovaV.jpeg" alt="Marie Martin" /></a>
 										<header>
 											<h3>lova</h3>
 											<div class="role">Développeuse </div>
@@ -116,7 +148,7 @@
 
 								<!-- Développeur 3 -->
 									<section class="developer-card">
-										<a href="#" class="image featured"><img src="images/hasina.jpg" alt="Pierre Durand" /></a>
+										<a href="#" class="image featured"><img src="images/hasinaV.jpg" alt="Pierre Durand" /></a>
 										<header>
 											<h3>hasina</h3>
 											<div class="role">Intégrateur</div>
